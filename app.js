@@ -5,6 +5,9 @@ require("./xyz.js");
 
 const {calculateSum,calculateMultiply}=require("./calculate");
 
+const data=require("./data.json");
+console.log(data);
+
 console.log(globalThis===global);
 
 var a=10;
