@@ -1,5 +1,7 @@
 console.log("Sum module executed");
 
+var x="Hello world";
+
 function calculateSum(a,b){
     const sum=a+b;
 
