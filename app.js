@@ -1,7 +1,9 @@
 require("./xyz.js");
 
-const {calculateSum}=require("./calculate/sum.js");
-const {calculateMultiply}=require("./calculate/multiply.js");
+// const {calculateSum}=require("./calculate/sum.js");
+// const {calculateMultiply}=require("./calculate/multiply.js");
+
+const {calculateSum,calculateMultiply}=require("./calculate/index.js");
 
 console.log(globalThis===global);
 
