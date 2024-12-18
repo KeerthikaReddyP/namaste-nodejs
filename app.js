@@ -1,5 +1,5 @@
 require("./xyz.js");
-require("./sum.js");
+const calculateSum=require("./sum.js");
 console.log(globalThis===global);
 
 var a=10;
