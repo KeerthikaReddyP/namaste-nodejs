@@ -1,11 +1,11 @@
 require("./xyz.js");
 
-const obj=require("./sum.js");
+const {x,calculateSum}=require("./sum.js");
 
 console.log(globalThis===global);
 
 var a=10;
 var b=20;
-obj.calculateSum(a,b);
+calculateSum(a,b);
 
-console.log(obj.x);
+console.log(x);
