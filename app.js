@@ -1,6 +1,6 @@
 require("./xyz.js");
 
-const {calculateSum}=require("./sum");
+const {calculateSum}=require("./calculate/sum.js");
 
 console.log(globalThis===global);
 
