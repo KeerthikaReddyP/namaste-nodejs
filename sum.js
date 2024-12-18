@@ -2,10 +2,12 @@ console.log("Sum module executed");
 
 var x="Hello world";
 
-function calculateSum(a,b){
+module.exports.x=x;
+
+module.exports.calculateSum=function calculateSum(a,b){
     const sum=a+b;
 
     console.log(sum);
 }
 
-module.exports={x,calculateSum};
+// module.exports={x,calculateSum};
