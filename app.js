@@ -1,6 +1,7 @@
-require("./xyz.js");
+// require("./xyz.js");
 
-const {x,calculateSum}=require("./sum");
+// const {x,calculateSum}=require("./sum");
+import { calculateSum } from "./sum.js";
 
 console.log(globalThis===global);
 
