@@ -1,6 +1,16 @@
+// function calculateMultiply(a,b){
+//     console.log(a*b);
+// }
 
-function calculateMultiply(a,b){
-    console.log(a*b);
-}
+// module.exports={calculateMultiply};
 
-module.exports={calculateMultiply};
+// xyz is also a module.
+//It is also wrapped inside a function before executing.
+
+(function () {
+  function calculateMultiply(a, b) {
+    console.log(a * b);
+  }
+
+  module.exports = { calculateMultiply };
+})();
