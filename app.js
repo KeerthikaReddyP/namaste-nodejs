@@ -1,5 +1,10 @@
 require("./xyz.js");
 
+// we're requiring xyz module
+// The entire code of xyz is wrapped inside a function and then executed.
+function(){
+    //code of xyz
+}
 
 
 
