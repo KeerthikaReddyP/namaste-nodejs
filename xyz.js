@@ -1,18 +1,10 @@
-// function calculateMultiply(a,b){
-//     console.log(a*b);
-// }
+// 5 steps of require
 
-// module.exports={calculateMultiply};
 
-// xyz is also a module.
-//It is also wrapped inside a function before executing.
-
-(function (module,require,...) {
-    require("./path");
-    // require another module inside xyz module
-  function calculateMultiply(a, b) {
-    console.log(a * b);
-  }
-
-  module.exports = { calculateMultiply };
-})();
+/*
+    1. Resolving the module
+    2. Loading the module
+    3. Wrapping it inside an IIFE
+    4. Code Evalueation
+    5. Caching
+*/
