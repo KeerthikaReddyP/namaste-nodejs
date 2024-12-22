@@ -1,10 +1,6 @@
 
-console.log("Very important code");
-
-function x(){
-    const a=10;
-    function b(){
-        console.log("b");
-    }
+function calculateMultiply(a,b){
+    console.log(a*b);
 }
-console.log(a); // Error
+
+module.exports={calculateMultiply};
