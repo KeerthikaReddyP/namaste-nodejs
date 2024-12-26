@@ -1,5 +1,5 @@
-const fs=require("fs");
-const https=require("https");
+const fs=require("node:fs");
+const https=require("node:https");
 
 console.log("Hello world");
 
