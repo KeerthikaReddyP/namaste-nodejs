@@ -7,7 +7,13 @@ var a=1029232;
 var b=2342;
 
 https.get("https://dummyjson.com/products/1",(res)=>{
+    // console.log("Data fetched successfully");
     console.log("Data fetched successfully");
+    res.on("data", () => {}); // Consume the response
+    res.on("end", () => {
+        console.log("Response fully consumed");
+        res.destroy(); // Close the socket explicitly
+    });
 });
 
 setTimeout(()=>{
