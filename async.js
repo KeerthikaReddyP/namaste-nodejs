@@ -20,9 +20,14 @@ setTimeout(()=>{
     console.log("Timeout for 5 secs");
 },5000);
 
+//asynchronous
 fs.readFile("./file.txt","utf8", (err,data)=>{
     console.log("File data ", data);
 });
+
+//synchronous
+fs.readFileSync("./file.txt","utf8");
+console.log("This will execute only after file read")
 
 function multiplyFn(x,y){
     const result=x*y;
