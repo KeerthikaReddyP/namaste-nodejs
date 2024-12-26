@@ -25,7 +25,7 @@ fs.readFile("./file.txt","utf8", (err,data)=>{
     console.log("File data ", data);
 });
 
-//synchronous
+//synchronous (blocking)
 fs.readFileSync("./file.txt","utf8");
 console.log("This will execute only after file read")
 
