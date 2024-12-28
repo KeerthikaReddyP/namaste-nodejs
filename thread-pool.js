@@ -1,25 +1,33 @@
-const crypto=require("node:crypto");
+process.env.UV_THREADPOOL_SIZE = 8;
+// If this wont work, 
+// Use $env:UV_THREADPOOL_SIZE=8; node thread-pool.js in the terminal while executing.
 
-process.env.UV_THREADPOOL_SIZE=2;
+const crypto = require("node:crypto");
 
-crypto.pbkdf2("password","salt", 500000,50,"sha512",(err,key)=>{
-    console.log("1-crypto pbkdf2 DONE");
+const start=Date.now();
+
+function logWithTime(id){
+    console.log(`${id} DONE at ${Date.now()-start}ms`);
+}
+
+crypto.pbkdf2("password", "salt", 500000, 50, "sha512", (err, key) => {
+  logWithTime(1);
 });
 
-crypto.pbkdf2("password","salt", 500000,50,"sha512",(err,key)=>{
-    console.log("2-crypto pbkdf2 DONE");
+crypto.pbkdf2("password", "salt", 500000, 50, "sha512", (err, key) => {
+    logWithTime(2);
 });
 
-crypto.pbkdf2("password","salt", 500000,50,"sha512",(err,key)=>{
-    console.log("3-crypto pbkdf2 DONE");
+crypto.pbkdf2("password", "salt", 500000, 50, "sha512", (err, key) => {
+    logWithTime(3);
 });
 
-crypto.pbkdf2("password","salt", 500000,50,"sha512",(err,key)=>{
-    console.log("4-crypto pbkdf2 DONE");
+crypto.pbkdf2("password", "salt", 500000, 50, "sha512", (err, key) => {
+    logWithTime(4);
 });
 
-crypto.pbkdf2("password","salt", 500000,50,"sha512",(err,key)=>{
-    console.log("5-crypto pbkdf2 DONE");
+crypto.pbkdf2("password", "salt", 500000, 50, "sha512", (err, key) => {
+    logWithTime(5);
 });
 
 // They take same time to complete and printed at the same time.
