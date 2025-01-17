@@ -24,6 +24,10 @@ async function main() {
   const insertResult=await collection.insertMany([data]);
   console.log("Inserted documents => ",insertResult);
 
+  // Update
+  const updateResult=await collection.updateMany({firstname:"Someone"},{$set:{firstname:"Someone2"}});
+  console.log("Updated documents => ",updateResult);
+
   // Read
   const findResult = await collection.find({}).toArray();
   console.log("Found documents => ",findResult);
