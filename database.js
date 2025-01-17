@@ -15,6 +15,10 @@ async function main() {
   const db = client.db(dbName);
   const collection = db.collection("User");
 
+  // Read
+  const findResult = await collection.find({}).toArray();
+  console.log("Inserted documents => ",findResult);
+
   return "Done";
 }
 
