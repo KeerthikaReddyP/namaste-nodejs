@@ -28,6 +28,10 @@ async function main() {
   const updateResult=await collection.updateMany({firstname:"Someone"},{$set:{firstname:"Someone2"}});
   console.log("Updated documents => ",updateResult);
 
+  // Delete
+  const deleteResult=await collection.deleteOne({firstname:"Someone2"});
+  console.log("Deleted documents=> ",deleteResult);
+
   // Read
   const findResult = await collection.find({}).toArray();
   console.log("Found documents => ",findResult);
