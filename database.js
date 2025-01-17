@@ -1,8 +1,8 @@
 const { MongoClient } = require("mongodb");
 
 //Connection string
-// const URI =
-//   "mongodb+srv://keerthikareddy267:S8MUnIUbV9cX9V6L@nodebykeer.oxcbl.mongodb.net/";
+const URI =
+  "mongodb+srv://keerthikareddy267:S8MUnIUbV9cX9V6L@nodebykeer.oxcbl.mongodb.net/";
 
 const client = new MongoClient(URI);
 
@@ -33,3 +33,7 @@ main()
 // Get the connection string
 // Install mongo db compass
 // Create your database & Add data
+
+// Install mongodb package from npm
+// create connection from code
+// CRUD Operations
